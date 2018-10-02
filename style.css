@@ -275,11 +275,9 @@ li{
   position: relative;
   right: 3pt;
   top: 0.25pt;
-  font-family: FontAwesome;
-  font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
-  content: "\f041";
+  content: "\f3c5";
 }
 
 /***** fine-tunes on the lists... *****/
@@ -392,4 +390,21 @@ body > *{
 }
 #sidebar{
   height: var(--page-height);
+}
+
+
+.recommendation {
+    margin: 1.5em 0px;
+    font-style: italic;
+}
+
+.recommendation > div {
+    font-style: normal;
+    margin: 0.4em 0.6em;
+}
+
+.recommendation > div:before {
+    content: "- ";
+    position: absolute;
+    left: 1.8em;
 }
