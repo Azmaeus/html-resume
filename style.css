@@ -8,25 +8,25 @@
 }
 
 :root{
-  --page-width: 8.5in;
-  --page-height: 11in;
-  --main-width: 6.4in;
+  --page-width: 91.8rem;
+  --page-height: 118.8rem;
+  --main-width: 69.12rem;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
-  --decorator-horizontal-margin: 0.2in;
+  --decorator-horizontal-margin: 2.16rem;
 
-  --sidebar-horizontal-padding: 0.2in;
+  --sidebar-horizontal-padding: 2.16rem;
 
   /* XXX: using px for very good precision control */
-  --decorator-outer-offset-top: 10px;
-  --decorator-outer-offset-left: -5.5px;
-  --decorator-border-width: 1px;
-  --decorator-outer-dim: 9px;
-  --decorator-border: 1px solid #ccc;
+  --decorator-outer-offset-top: 1.125rem;
+  --decorator-outer-offset-left: -0.61875rem;
+  --decorator-border-width: 0.1125rem;
+  --decorator-outer-dim: 1.0125rem;
+  --decorator-border: 0.1125rem solid #ccc;
 
-  --row-blocks-padding-top: 5pt;
-  --date-block-width: 0.6in;
+  --row-blocks-padding-top: 0.749981rem;
+  --date-block-width: 6.48rem;
 
-  --main-blocks-title-icon-offset-left: -19pt;
+  --main-blocks-title-icon-offset-left: -2.849929rem;
 }
 
 body{
@@ -52,8 +52,8 @@ li{
 #main{
   float: left;
   width: var(--main-width);
-  padding: 0.25in 0.25in 0 0.25in;
-  font-size: 7.5pt;
+  padding: 2.7rem 2.7rem 0 2.7rem;
+  font-size: 1.124972rem;
 }
 
 #sidebar{
@@ -61,9 +61,9 @@ li{
   position: relative; /* for disclaimer */
   width: var(--sidebar-width);
   height: 100%;
-  padding: 0.6in var(--sidebar-horizontal-padding);
+  padding: 6.48rem var(--sidebar-horizontal-padding);
   background-color: #f3f3f3;
-  font-size: 8.5pt;
+  font-size: 1.274968rem;
 }
 
 /* main */
@@ -75,39 +75,39 @@ li{
 
 #title{
   position: relative;
-  left: 0.55in;
-  margin-bottom: 0.3in;
+  left: 5.94rem;
+  margin-bottom: 3.24rem;
   line-height: 1.2;
 }
 
 #title h1{
   font-weight: 300;
-  font-size: 18pt;
+  font-size: 2.699933rem;
   line-height: 1.5;
 }
 
 #title h1 strong{
-  margin: auto 2pt auto 4pt;
+  margin: auto 0.299992rem auto 0.599985rem;
   font-weight: 600;
 }
 
 .subtitle{
-  font-size: 8pt;
+  font-size: 1.19997rem;
 }
 
 /*** categorial blocks ***/
 
 .main-block{
-  margin-top: 0.25in;
+  margin-top: 2.7rem;
 }
 
 #main h2{
   position: relative;
   top: var(--row-blocks-padding-top);
-  /* XXX: 0.5px for aligning fx printing */
+  /* XXX: 0.05625rem for aligning fx printing */
   left: calc((var(--date-block-width) + var(--decorator-horizontal-margin)));
   font-weight: 400;
-  font-size: 11pt;
+  font-size: 1.649959rem;
   color: #555;
 }
 
@@ -125,7 +125,7 @@ li{
   height: calc(var(--row-blocks-padding-top) * 2);
   position: relative;
   top: calc(-1 * var(--row-blocks-padding-top));
-  /* XXX: 0.5px for aligning fx printing */
+  /* XXX: 0.05625rem for aligning fx printing */
   left: calc(-1 * var(--decorator-horizontal-margin));
   display: block;
   border-left: var(--decorator-border);
@@ -137,16 +137,16 @@ li{
 
 /**** minor tweaks on the icon fonts ****/
 #main h2 > .fa-graduation-cap{
-  left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
-  top: 2pt;
+  left: calc(var(--main-blocks-title-icon-offset-left) - 0.299992rem);
+  top: 0.299992rem;
 }
 
 #main h2 > .fa-suitcase{
-  top: 1pt;
+  top: 0.149996rem;
 }
 
 #main h2 > .fa-folder-open{
-  top: 1.5pt;
+  top: 0.224994rem;
 }
 
 /**** individual row blocks (date - decorator - details) ****/
@@ -162,9 +162,9 @@ li{
 
 .date{
   flex: 0 0 var(--date-block-width);
-  padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
+  padding-top: calc(var(--row-blocks-padding-top) + 0.374991rem) !important;
   padding-right: var(--decorator-horizontal-margin);
-  font-size: 7pt;
+  font-size: 1.049974rem;
   text-align: right;
   line-height: 1;
 }
@@ -175,17 +175,17 @@ li{
 
 .date span:nth-child(2)::before{
   position: relative;
-  top: 1pt;
-  right: 5.5pt;
+  top: 0.149996rem;
+  right: 0.824979rem;
   display: block;
-  height: 10pt;
+  height: 1.499963rem;
   content: '|';
 }
 
 .decorator{
   flex: 0 0 0;
   position: relative;
-  width: 2pt;
+  width: 0.299992rem;
   min-height: 100%;
   border-left: var(--decorator-border);
 }
@@ -193,7 +193,7 @@ li{
 /*
  * XXX: Use two filled circles to achieve the circle-with-white-border effect.
  * The normal technique of only using one pseudo element and
- * border: 1px solid white; style makes firefox erroneously either:
+ * border: 0.1125rem solid white; style makes firefox erroneously either:
  * 1) overflows the grayshade background (if no background-clip is set), or
  * 2) shows decorator line which should've been masked by the white border
  *
@@ -224,7 +224,7 @@ li{
 }
 
 .blocks:last-child .decorator{ /* slightly shortens it */
-  margin-bottom: 0.25in;
+  margin-bottom: 2.7rem;
 }
 
 /***** fine-tunes on the details block where the real juice is *****/
@@ -232,20 +232,20 @@ li{
 .details{
   flex: 1 0 0;
   padding-left: var(--decorator-horizontal-margin);
-  padding-top: calc(var(--row-blocks-padding-top) - 0.5pt) !important; /* not sure why but this is needed for better alignment */
+  padding-top: calc(var(--row-blocks-padding-top) - 0.074998rem) !important; /* not sure why but this is needed for better alignment */
 }
 
 .details header{
   color: #1a1a1a;
-  margin-bottom: 17px;
+  margin-bottom: 1.9125rem;
 }
 
 .details h3{
-  font-size: 9pt;
+  font-size: 1.349966rem;
 }
 
 .main-block:not(.concise) .details div{
-  /* margin: 0.18in 0 0.1in 0; */
+  /* margin: 1.944rem 0 1.08rem 0; */
 }
 
 .main-block:not(.concise) .blocks:last-child .details div{
@@ -255,12 +255,12 @@ li{
 .main-block.concise .details div:not(.concise){
   /* use padding to work around the fact that margin doesn't affect floated
      neighboring elements */
-  padding: 0.05in 0 0.07in 0;
+  padding: 0.54rem 0 0.756rem 0;
 }
 
 .details .place{
   float: left;
-  font-size: 7.5pt;
+  font-size: 1.124972rem;
   font-weight: 400;
 }
 
@@ -276,8 +276,8 @@ li{
 .details .location::before{
   display: inline-block;
   position: relative;
-  right: 3pt;
-  top: 0.25pt;
+  right: 0.449989rem;
+  top: 0.037499rem;
   font-style: normal;
   text-decoration: inherit;
   content: "\f3c5";
@@ -287,18 +287,18 @@ li{
 /***** fine-tunes on the lists... *****/
 
 #main ul{
-  padding-left: 0.07in;
-  margin: 0.08in 0;
+  padding-left: 0.756rem;
+  margin: 0.864rem 0;
 }
 
 #main li{
-  margin: 0.035in 0;
+  margin: 0.378rem 0;
 }
 
 /****** customize list symbol style ******/
 #main li::before{
   position: relative;
-  margin-left: -4.25pt;
+  margin-left: -0.637484rem;
   content: '• ';
 }
 
@@ -323,24 +323,24 @@ li{
 
 #sidebar h1{
   font-weight: 400;
-  font-size: 11pt;
+  font-size: 1.649959rem;
 }
 
 .side-block{
-  margin-top: 0.65in;
+  margin-top: 7.02rem;
 }
 
 #contact ul{
-  margin-top: 0.05in;
+  margin-top: 0.54rem;
   padding-left: 0;
   font-family: "Source Code Pro";
   font-weight: 400;
   line-height: 1.75;
-  font-size: 7pt;
+  font-size: 1.049974rem;
 }
 
 #contact li > i{
-  width: 9pt; /* for text alignment */
+  width: 1.349966rem; /* for text alignment */
   text-align: right;
 }
 
@@ -349,7 +349,7 @@ li{
 }
 
 .skills ul{
-  margin: 0.05in 0 0.15in;
+  margin: 0.54rem 0 1.62rem;
   padding: 0;
 }
 
@@ -357,7 +357,7 @@ li{
   position: absolute;
   bottom: var(--sidebar-horizontal-padding);
   right: var(--sidebar-horizontal-padding);
-  font-size: 7.5pt;
+  font-size: 1.124972rem;
   font-style: italic;
   line-height: 1.1;
   text-align: right;
@@ -397,7 +397,7 @@ body > *{
 
 
 .recommendation {
-    margin: 1.5em 0px;
+    margin: 1.5em 0.0rem;
     font-style: italic;
 }
 
@@ -414,9 +414,9 @@ body > *{
 
 svg.ts-logo {
     fill: #444444;
-    width: 10px;
+    width: 1.125rem;
     position: relative;
-    top: 1px;
+    top: 0.1125rem;
 } 
 
 @media not print {
@@ -429,6 +429,9 @@ svg.ts-logo {
 }
 
 @media print {
+  :root {
+    font-size: 8.888888889px;
+  }
   #sidebar {
     background-color: #e3e3e3;
   }
