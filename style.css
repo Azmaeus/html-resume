@@ -450,13 +450,13 @@ svg.ts-logo {
     position: fixed;
     bottom: 0;
     right: 10rem;
-    background-color: #77AADD;
+    background-color: #214827eb;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     font-size: 1.1rem;
-    color: #111;
+    color: #FFF;
     border-radius: 4px 4px 0 0;
 }
 
 .source-link a {
-    color: #333;
+    color: #DDD;
 }
