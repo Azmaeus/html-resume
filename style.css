@@ -61,8 +61,8 @@ li{
   position: relative; /* for disclaimer */
   width: var(--sidebar-width);
   height: 100%;
-  padding: 6.48rem var(--sidebar-horizontal-padding);
-  background-color: #f3f3f3;
+  padding: 4.5rem var(--sidebar-horizontal-padding);
+  background-color: #f8f8f8;
   font-size: 1.274968rem;
 }
 
@@ -327,16 +327,16 @@ li{
 }
 
 .side-block{
-  margin-top: 7.02rem;
+  margin-top: 6.5rem;
 }
 
 #contact ul{
   margin-top: 0.54rem;
   padding-left: 0;
-  font-family: "Source Code Pro";
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
   line-height: 1.75;
-  font-size: 1.049974rem;
+  font-size: 1.3rem;
 }
 
 #contact li > i{
@@ -450,7 +450,7 @@ svg.ts-logo {
     position: fixed;
     bottom: 0;
     right: 10rem;
-    background-color: #214827eb;
+    background-color: #214827de;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     font-size: 1.1rem;
     color: #FFF;
