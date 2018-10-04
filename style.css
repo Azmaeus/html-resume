@@ -417,7 +417,9 @@ svg.ts-logo {
     width: 1.125rem;
     position: relative;
     top: 0.1125rem;
-} 
+}
+
+
 
 @media not print {
   a[href]{
@@ -437,4 +439,24 @@ svg.ts-logo {
   }
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
+
+  .no-print {
+    display:none;
+  }
+}
+
+
+.source-link {
+    position: fixed;
+    bottom: 0;
+    right: 10rem;
+    background-color: #77AADD;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    color: #111;
+    border-radius: 4px 4px 0 0;
+}
+
+.source-link a {
+    color: #333;
 }
