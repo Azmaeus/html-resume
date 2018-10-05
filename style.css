@@ -432,13 +432,13 @@ svg.ts-logo {
 
 @media print {
   :root {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
     font-size: 8.888888889px;
   }
   #sidebar {
     background-color: #e3e3e3;
   }
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
 
   .no-print {
     display:none;
