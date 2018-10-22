@@ -462,9 +462,21 @@ svg.ts-logo {
     color: #DDD;
 }
 
-a.download-button {
+.control-buttons {
     position: absolute;
-    right: 4rem;
-    top: 1em;
-    font-size: 2.5rem;
+    padding: 0.15em 0.2em;
+    left: 0;
+    top: 0;
+    margin: 0.8em;
+    font-size: 2.1rem;
+    border: dashed #28582fed 0.1em;
+}
+
+.control-buttons a {
+    margin: 0.2em;
+}
+
+.control-buttons a {
+    color:  #28582fed;
+    margin: 0.2em;
 }
