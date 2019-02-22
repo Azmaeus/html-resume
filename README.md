@@ -1,7 +1,7 @@
 # Attribution
-I forked this resume template from https://github.com/coolaj86/html-resume (who forked it from: https://github.com/mnjul/html-resume)
+I forked this resume template from https://git.jshaver.net/jshaver/html-resume (who forked it from: https://github.com/coolaj86/html-resume (who forked it from: https://github.com/mnjul/html-resume))
 
-No other changes have been made to these Docs.  If you're interested in using my fork let me know and I'll update them with relevant info. <john@jshaver.net>
+No other changes have been made to these Docs.  If you're interested in using my fork let me know and I'll update them with relevant info. <eric@ericolsen.us>
 
 # html-resume
 A single-page résumé template done purely with HTML and CSS, which can be rendered into PDF through web browsers' print-to-PDF functionality, making a nice, sleek, professsional and ready-to-print résumé. See my living example at: https://mnjul.net/cv/resume.pdf
