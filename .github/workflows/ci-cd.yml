@@ -8,7 +8,7 @@ jobs:
   build:
     steps:
       - name: Deploy with SSH and rsync
-        uses: burnett01/rsync-deployments@5.2.1
+        uses: burnett01/rsync-deployments@7.0.1
         with:
           switches: -vr
           path: /
