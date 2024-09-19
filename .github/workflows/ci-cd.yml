@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
