@@ -13,7 +13,6 @@ jobs:
         uses: burnett01/rsync-deployments@7.0.1
         with:
           switches: -vr
-          path: /
           remote_path: /var/www/ericolsen.us/resume
           remote_host: ${{ secrets.HOMESERVER_URL }}
           remote_user: ${{ secrets.HOMESERVER_DEPLOY_USER }}
