@@ -9,6 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@latest
+        
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
