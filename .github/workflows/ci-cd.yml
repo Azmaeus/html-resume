@@ -15,7 +15,7 @@ jobs:
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -vr
+          switches: -vr --delete-after --exclude .git/ --exclude .github/ --exclude .gitmodules --exclude LICENSE --exclude README.md
           remote_path: /var/www/ericolsen.us/resume
           remote_host: ${{ secrets.HOMESERVER_URL }}
           remote_user: ${{ secrets.HOMESERVER_DEPLOY_USER }}
