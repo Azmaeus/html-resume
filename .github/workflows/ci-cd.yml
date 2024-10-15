@@ -18,7 +18,6 @@ jobs:
         uses: Eun/http-server-action@v1
         with:
           directory: ${{ github.workspace }}
-          index-files: index.html
 
       - name: Print PDF
         run: chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="./Eric-F-Olsen-Resume.pdf" http://localhost:8080/ --virtual-time-budget=10000;
