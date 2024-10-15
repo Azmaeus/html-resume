@@ -33,7 +33,6 @@ jobs:
       - name: Test HTTP Server
         run: |
           curl http://localhost:8080
-          cat log.txt
 
       - name: HTML to PDF
         uses: misaelnieto/web_to_pdf_action@v0.3.1
