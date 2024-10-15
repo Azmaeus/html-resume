@@ -14,28 +14,11 @@ jobs:
         with:
           submodules: true
 
-      - name: Serve Files
-        uses: Eun/http-server-action@v1
+      - name: HTML to PDF
+        uses: ferdinandkeller/html-to-pdf-action@v1
         with:
-          directory: ${{ github.workspace }}
-          port: 8080
-          no-cache: true
-          index-files: |
-            ["index.html", "index.htm"]
-          allowed-methods: |
-            ["GET", "HEAD"]
-          content-types: |
-            {
-              ".html": "text/html",
-              ".css": "text/css"
-            }
-
-      - name: HTML to PDF with Puppeteer and the real Google Chrome
-        uses: arthur-jaouen/html2pdf-action@v1
-        with:
-          inputPath: "./index.html"
-          outputPath: "./Eric-F-Olsen-Resume.pdf"
-          pdfOptions: '{"format": "Letter", "printBackground": true}'
+          source-path: ./
+          destination-path: ./Eric-F-Olsen-Resume.pdf
 
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
