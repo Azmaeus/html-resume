@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: true
         
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
