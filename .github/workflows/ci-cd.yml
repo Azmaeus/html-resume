@@ -35,7 +35,7 @@ jobs:
         with:
           inputPath: "./index.html"
           outputPath: "./Eric-F-Olsen-Resume.pdf"
-          pdfOptions: '{"format": "Letter", "printBackground": true, "preferCSSPageSize": true}'
+          pdfOptions: '{"format": "Letter", "printBackground": true}'
 
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
