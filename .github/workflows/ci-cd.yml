@@ -35,9 +35,9 @@ jobs:
           curl http://localhost:8080
 
       - name: HTML to PDF
-        uses: misaelnieto/web_to_pdf_action@v0.3.1
+        uses: frnode/html-to-pdf-action@master
         with:
-          webPageURL: http://localhost:8080
+          htmlFile: ${{ github.workspace }}/index.html
           outputFile: ${{ github.workspace }}/Eric-F-Olsen-Resume.pdf
 
       - name: Deploy with SSH and rsync
