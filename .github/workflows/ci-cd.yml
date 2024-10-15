@@ -22,9 +22,8 @@ jobs:
       - name: HTML to PDF
         uses: misaelnieto/web_to_pdf_action@v0.3.1
         with:
-          webPageURL: http://localhost/index.html
+          webPageURL: http://localhost:8080/index.html
           outputFile: ${{ github.workspace }}/Eric-F-Olsen-Resume.pdf
-          useScreen: true
 
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
