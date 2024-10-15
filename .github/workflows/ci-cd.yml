@@ -19,8 +19,11 @@ jobs:
         with:
           directory: ${{ github.workspace }}
 
-      - name: Print PDF
-        run: chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="./Eric-F-Olsen-Resume.pdf" http://localhost:8080/ --virtual-time-budget=10000;
+      - name: HTML to PDF
+        uses: fifsky/html-to-pdf-action@v0.1.0
+        with:
+          htmlFile: ${{ github.workspace }}/index.html
+          outputFile: ${{ github.workspace }}/Eric-F-Olsen-Resume.pdf
 
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
