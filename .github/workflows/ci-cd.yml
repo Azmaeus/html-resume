@@ -14,11 +14,17 @@ jobs:
         with:
           submodules: true
 
-      - name: HTML to PDF
-        uses: fifsky/html-to-pdf-action@v0.1.0
+      - name: Serve Files
+        uses: Eun/http-server-action@v1
         with:
-          htmlFile: ${{ github.workspace }}/index.html
+          directory: ${{ github.workspace }}
+
+      - name: HTML to PDF
+        uses: misaelnieto/web_to_pdf_action@v0.3.1
+        with:
+          webPageURL: http://localhost/index.html
           outputFile: ${{ github.workspace }}/Eric-F-Olsen-Resume.pdf
+          useScreen: true
 
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
