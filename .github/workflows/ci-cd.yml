@@ -38,7 +38,7 @@ jobs:
         uses: markwilson/html2pdf@v1.0
         with:
           htmlPath: ${{ github.workspace }}/index.html
-          pdfName: ${{ github.workspace }}/Eric-F-Olsen-Resume
+          pdfName: Eric-F-Olsen-Resume
 
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
