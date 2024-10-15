@@ -14,11 +14,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Serve Files
-        uses: Eun/http-server-action@v1
-        with:
-          directory: ${{ github.workspace }}
-
       - name: HTML to PDF
         uses: fifsky/html-to-pdf-action@v0.1.0
         with:
