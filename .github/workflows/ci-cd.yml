@@ -18,6 +18,22 @@ jobs:
         uses: Eun/http-server-action@v1
         with:
           directory: ${{ github.workspace }}
+          port: 8080
+          no-cache: true
+          index-files: |
+            ["index.html", "index.htm"]
+          allowed-methods: |
+            ["GET", "HEAD"]
+          content-types: |
+            {
+              ".html": "text/html",
+              ".css": "text/css"
+            }
+
+      - name: Test HTTP Server
+        run: |
+          curl http://localhost:8080
+          cat log.txt
 
       - name: HTML to PDF
         uses: misaelnieto/web_to_pdf_action@v0.3.1
