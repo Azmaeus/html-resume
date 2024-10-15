@@ -17,8 +17,8 @@ jobs:
       - name: HTML to PDF
         uses: ferdinandkeller/html-to-pdf-action@v1
         with:
-          source-path: ./
-          destination-path: ./Eric-F-Olsen-Resume.pdf
+          source-path: "./"
+          destination-path: "./Eric-F-Olsen-Resume.pdf"
 
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
