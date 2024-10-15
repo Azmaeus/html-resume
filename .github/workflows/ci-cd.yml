@@ -13,7 +13,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
-        
+
+      - name: Serve Files
+        uses: Eun/http-server-action@v1
+        with:
+          directory: ${{ github.workspace }}
+          index-files: index.html
+
+      - name: Print PDF
+        run: chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="./Eric-F-Olsen-Resume.pdf" http://localhost:8080/ --virtual-time-budget=10000;
+
       - name: Deploy with SSH and rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
