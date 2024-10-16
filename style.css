@@ -76,13 +76,13 @@ li{
 #title{
   position: relative;
   left: 5.94rem;
-  margin-bottom: 3.24rem;
+  margin-bottom: 3rem;
   line-height: 1.2;
 }
 
 #title h1{
   font-weight: 300;
-  font-size: 2.699933rem;
+  font-size: 2.9rem;
   line-height: 1.5;
 }
 
@@ -92,7 +92,7 @@ li{
 }
 
 .subtitle{
-  font-size: 1.19997rem;
+  font-size: 1.3rem;
 }
 
 /*** categorial blocks ***/
@@ -326,8 +326,12 @@ li{
   font-size: 1.649959rem;
 }
 
+div#contact{
+  margin-top: 7.5rem;
+}
+
 .side-block{
-  margin-top: 6.5rem;
+  margin-top: 4rem;
 }
 
 #contact ul{
